@@ -1,18 +1,18 @@
 def overriddenParams = [
-    string(name: 'S3_DEST_BUCKET', defaultValue: 'your-s3-bucket', description: 'The AWS S3 bucket to send the build artifacts to.'),
+    string(name: 'S3_DEST_BUCKET', defaultValue: 'knifecenter-jenkins', description: 'The AWS S3 bucket to send the build artifacts to.'),
 
     //-- BEGIN: This section is for automated testing.
-    string(name: 'CRYPT_KEY', defaultValue: 'your-crypt-key', description: 'Name of Crypt Key Credential'),
+    string(name: 'CRYPT_KEY', defaultValue: 'JkeEumwvvQBCDxypLPBozvrpF2rFNhNL', description: 'Name of Crypt Key Credential'),
     string(name: 'TABLE_PREFIX', defaultValue: '', description: 'Table prefix for DB'),
-    string(name: 'S3_DB_BUCKET', defaultValue: 'your-s3-seed-db-bucket', description: 'S3 bucket that holds the DB upload'),
-    string(name: 'S3_DB_FILE', defaultValue: 'swiftotter-db.gz', description: 'File in S3 bucket containing development DB dump'),
+    string(name: 'S3_DB_BUCKET', defaultValue: 'knifecenter-jenkins', description: 'S3 bucket that holds the DB upload'),
+    string(name: 'S3_DB_FILE', defaultValue: 'knifecenter-db.gz', description: 'File in S3 bucket containing development DB dump'),
     string(name: 'SKIP_TEST', defaultValue: '1', description: 'Whether or not to skip tests'),
     //-- END
     
     //-- BEING: this section is for Magento-specific values.
-    string(name: 'THEME', defaultValue: 'your-theme-name', description: 'Name of primary project theme'),
-    string(name: 'MAGENTO_VERSION', defaultValue: '2.1', description: 'Current version of Magento'),
-    string(name: 'PACKAGIST', defaultValue: 'your-packagist-composer-crednetials', description: 'Packagist / composer configuration credential name')
+    string(name: 'THEME', defaultValue: 'Forix/knifecenter', description: 'Name of primary project theme'),
+    string(name: 'MAGENTO_VERSION', defaultValue: '2.2.7', description: 'Current version of Magento'),
+    string(name: 'PACKAGIST', defaultValue: 'http-basic', description: 'Packagist / composer configuration credential name')
     //-- END
 ]
 
