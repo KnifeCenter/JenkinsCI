@@ -10,9 +10,9 @@ def overriddenParams = [
     //-- END
     
     //-- BEING: this section is for Magento-specific values.
-    string(name: 'THEME', defaultValue: 'Forix/knifecenter', description: 'Name of primary project theme'),
-    string(name: 'MAGENTO_VERSION', defaultValue: '2.2.7', description: 'Current version of Magento'),
-    string(name: 'PACKAGIST', defaultValue: 'http-basic', description: 'Packagist / composer configuration credential name')
+    string(name: 'THEME', defaultValue: 'frontend/Forix/knifecenter', description: 'Name of primary project theme'),
+    string(name: 'MAGENTO_VERSION', defaultValue: '2.2', description: 'Current version of Magento'),
+    string(name: 'PACKAGIST', defaultValue: 'KnifeCenter-Packagist', description: 'Packagist / composer configuration credential name')
     //-- END
 ]
 
@@ -25,7 +25,7 @@ properties([parameters(mergedParams), pipelineTriggers([])])
 // To deploy to multiple targets, add more lines below.
 // This will likely mean that the overriddenParams variable above needs to be updated.
 def inputDevDeployTargets = [
-//    [ sshUser: 'deploy', sshHost: '', sshPort: '22', sshPath: '', sshKey: '' ]
+    [ sshUser: 'ec2-user', sshHost: 'ec2-52-90-155-69.compute-1.amazonaws.com', sshPort: '22', sshPath: '/home/ec2-user/site', sshKey: 'KnifeCenter-Generic' ]
 ]
 def inputProdDeployTargets = [
     [ sshUser: 'deploy', sshHost: '', sshPort: '22', sshPath: '', sshKey: '' ]
