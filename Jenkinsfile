@@ -2,11 +2,11 @@ def overriddenParams = [
     string(name: 'S3_DEST_BUCKET', defaultValue: 'knifecenter-jenkins', description: 'The AWS S3 bucket to send the build artifacts to.'),
 
     //-- BEGIN: This section is for automated testing.
-    string(name: 'CRYPT_KEY', defaultValue: 'your-crypt-key', description: 'Name of Crypt Key Credential'),
-    string(name: 'TABLE_PREFIX', defaultValue: '', description: 'Table prefix for DB'),
-    string(name: 'S3_DB_BUCKET', defaultValue: 'knifecenter-jenkins', description: 'S3 bucket that holds the DB upload'),
-    string(name: 'S3_DB_FILE', defaultValue: 'knifecenter-db.gz', description: 'File in S3 bucket containing development DB dump'),
-    string(name: 'SKIP_TEST', defaultValue: '1', description: 'Whether or not to skip tests'),
+    //string(name: 'CRYPT_KEY', defaultValue: 'your-crypt-key', description: 'Name of Crypt Key Credential'),
+    //string(name: 'TABLE_PREFIX', defaultValue: '', description: 'Table prefix for DB'),
+    //string(name: 'S3_DB_BUCKET', defaultValue: 'knifecenter-jenkins', description: 'S3 bucket that holds the DB upload'),
+    //string(name: 'S3_DB_FILE', defaultValue: 'knifecenter-db.gz', description: 'File in S3 bucket containing development DB dump'),
+    //string(name: 'SKIP_TEST', defaultValue: '1', description: 'Whether or not to skip tests'),
     //-- END
     
     //-- BEING: this section is for Magento-specific values.
